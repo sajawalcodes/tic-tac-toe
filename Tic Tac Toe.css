@@ -1,0 +1,155 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Title */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #ff6b81;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Game Container */
+.game-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Game Status */
+.status {
+    margin: 20px 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    min-height: 36px;
+    color: #fddb3a;
+}
+
+/* Grid Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+/* Cell Style */
+.cell {
+    width: 90px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cell:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+}
+
+/* X Marker */
+.cell.x::before,
+.cell.x::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 60px;
+    background-color: #ff4757;
+    border-radius: 4px;
+}
+
+.cell.x::before {
+    transform: rotate(45deg);
+}
+
+.cell.x::after {
+    transform: rotate(-45deg);
+}
+
+/* O Marker */
+.cell.o::before {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 8px solid #1dd1a1;
+}
+
+/* Button Styles */
+.reset-btn,
+.new-game-btn {
+    background: linear-gradient(to right, #ff6b81, #ff4757);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.reset-btn:hover,
+.new-game-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+.reset-btn:active,
+.new-game-btn:active {
+    transform: scale(0.98);
+}
+
+.new-game-btn {
+    background: linear-gradient(to right, #1dd1a1, #48dbfb);
+    display: none;
+    margin: 25px auto;
+}
+
+/* Winning Animation */
+.winner {
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+
+    100% {
+        transform: scale(1.08);
+        filter: brightness(1.2);
+    }
+}
