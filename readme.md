@@ -3,14 +3,6 @@
 A modern, elegant Tic Tac Toe game built with **HTML**, **CSS**, and **JavaScript** — with celebration on victory! 🎉  
 This is my first JavaScript project. 😄
 
-## 🖥️ Live Demo
-
-👉 [Play the Game Here](https://sajawalcodes.github.io/tic-tac-toe/)
-
-
-## 📸 Screenshots
-
-<img src="TIC TAC TOE/screenshot.png" alt="Tic Tac Toe Screenshot" width="400"/>
 
 ## ✨ Features
 
