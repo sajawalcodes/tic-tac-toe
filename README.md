@@ -7,7 +7,6 @@ This is my first JavaScript project. 😄
 ✨ Features
 Responsive layout
 Beautiful modern glassmorphic design
-Confetti animation on win 🥳
 Reset and new game buttons
 Turn indicator and draw detection
 🚀 How to Use
